@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="447.0" prefWidth="782.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="ImagViewReception" fitHeight="447.0" fitWidth="782.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/signIn.jpg" />
+         </image>
+      </ImageView>
+      <Pane fx:id="PaneWelcome" layoutX="58.0" layoutY="173.0" prefHeight="266.0" prefWidth="296.0" style="-fx-background-color: rgba(0, 0, 0, 0.5); -fx-background-radius: 30;">
+         <children>
+            <Label fx:id="LapelWelcome" layoutX="14.0" layoutY="14.0" prefHeight="33.0" prefWidth="254.0" text="Welcome to your Dental Clinic !" textFill="#eceaea">
+               <font>
+                  <Font name="Britannic Bold" size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow height="43.52" radius="22.0625" spread="0.68" width="46.73">
+                     <color>
+                        <Color red="0.062745101749897" green="0.062745101749897" blue="0.062745101749897" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Label>
+            <Label fx:id="LabelSign" layoutX="14.0" layoutY="57.0" prefHeight="17.0" prefWidth="127.0" text="Please sign in" textFill="#f4f1f1">
+               <font>
+                  <Font name="Britannic Bold" size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow height="54.93" radius="30.765" spread="0.73" width="70.13">
+                     <color>
+                        <Color red="0.062745101749897" green="0.062745101749897" blue="0.062745101749897" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Label>
+            <Pane fx:id="PaneUser" layoutX="18.0" layoutY="88.0" prefHeight="45.0" prefWidth="246.0">
+               <children>
+                  <JFXTextField fx:id="JFXTextFieldUser" focusColor="BLACK" layoutX="72.0" layoutY="4.0" prefHeight="33.0" prefWidth="158.0" style="-fx-background-color: rgba(255, 255, 255, 0.5);" unFocusColor="#fffcfc">
+                     <effect>
+                        <Glow level="0.45" />
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXTextField>
+                  <ImageView fx:id="ImageViewUser" fitHeight="34.0" fitWidth="36.0" layoutX="21.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                     <effect>
+                        <DropShadow spread="0.2">
+                           <input>
+                              <Glow />
+                           </input>
+                           <color>
+                              <Color red="0.9157894849777222" green="0.8716959357261658" blue="0.8716959357261658" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <image>
+                        <Image url="@img/user2icon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="PanePassword" layoutX="33.0" layoutY="133.0" prefHeight="45.0" prefWidth="230.0">
+               <children>
+                  <JFXTextField fx:id="JFXTextFieldPassword" focusColor="#050608" layoutX="58.0" layoutY="6.0" prefHeight="33.0" prefWidth="158.0" style="-fx-background-color: rgba(255, 255, 255, 0.5);" unFocusColor="#e7e2e2">
+                     <effect>
+                        <Glow level="0.51" />
+                     </effect>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </JFXTextField>
+                  <ImageView fx:id="ImageViewPassword" fitHeight="34.0" fitWidth="34.0" layoutX="8.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <effect>
+                        <DropShadow spread="0.16">
+                           <color>
+                              <Color red="0.7789473533630371" green="0.7702924013137817" blue="0.7702924013137817" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <image>
+                        <Image url="@img/password.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Pane>
+            <Button fx:id="ButtonLogin" layoutX="95.0" layoutY="187.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="106.0" style="-fx-background-color: rgb(30, 30, 30); -fx-background-radius: 20;" text="Login">
+               <font>
+                  <Font name="Bookman Old Style" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow spread="0.11">
+                     <color>
+                        <Color red="0.7684210538864136" green="0.722885012626648" blue="0.722885012626648" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <textFill>
+                  <RadialGradient centerX="0.5044247956402534" centerY="0.5" focusDistance="-0.09174311926605505" radius="0.47247709046810044">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.6947368383407593" green="0.6638596653938293" blue="0.6638596653938293" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.9200000166893005" green="0.9200000166893005" blue="0.9200000166893005" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Button>
+            <Button fx:id="ButtonForget" layoutX="53.0" layoutY="229.0" mnemonicParsing="false" opacity="0.86" prefHeight="23.0" prefWidth="202.0" style="-fx-background-color: rgba(240, 240, 240, 0.2); -fx-border-radius: 60;" text="Forget Your Password ?">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
