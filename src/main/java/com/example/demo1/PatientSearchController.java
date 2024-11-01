@@ -9,6 +9,10 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import java.io.IOException;
+import javafx.scene.control.Alert;
+
+
 
 public class PatientSearchController {
 
@@ -96,6 +100,10 @@ public class PatientSearchController {
     void handleSearchByPhone(ActionEvent event) {
         try {
 
+            Stage currentStage = (Stage) SearchNameButton.getScene().getWindow();
+            currentStage.close(); // إغلاق الشاشة السابقة
+
+
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/SearchByPhone.fxml"));
             Parent root = loader.load();
             Stage stage = new Stage();
@@ -110,6 +118,70 @@ public class PatientSearchController {
             errorAlert.setHeaderText(null);
             errorAlert.setContentText("Failed to load the search by phone screen. Please try again.");
             errorAlert.showAndWait();
+        }
+    }
+
+    @FXML
+    void handleSearchName(ActionEvent event) {
+        try {
+
+            Stage currentStage = (Stage) SearchNameButton.getScene().getWindow();
+            currentStage.close();
+
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/SearchByName.fxml")); // تأكد من وضع اسم ملف FXML الصحيح
+            Parent root = loader.load();
+            Stage searchNameStage = new Stage();
+            searchNameStage.setTitle("Search Patient by Name");
+            searchNameStage.setScene(new Scene(root));
+            searchNameStage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            showAlert("Error", "Failed to load the search interface.");
+        }
+    }
+
+
+
+    @FXML
+    void handleShow(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/showAllPatient.fxml"));
+            Parent newPage = loader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(newPage));
+            stage.show();
+            Stage currentStage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+            currentStage.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            showAlert("Error", "Failed to load the new page.");
+        }
+
+    }
+    private void showAlert(String title, String content) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(content);
+        alert.showAndWait();
+    }
+
+    @FXML
+    void handleAddButton(ActionEvent event) {
+        try {
+            // تحميل FXML الخاص بالواجهة الجديدة
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/AddNewPatient.fxml"));
+            Parent root = loader.load();
+
+            Stage addPatientStage = new Stage();
+            addPatientStage.setTitle("Add Patient");
+            addPatientStage.setScene(new Scene(root));
+            addPatientStage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

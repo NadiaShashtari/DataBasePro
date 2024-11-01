@@ -30,12 +30,12 @@
                <children>
                   <Pane fx:id="Pane4444" layoutX="19.0" layoutY="14.0" prefHeight="46.0" prefWidth="540.0" style="-fx-background-color: rgba(0, 0, 0, 0.5); -fx-background-radius: 20;">
                      <children>
-                        <Button fx:id="ShowButton" layoutX="202.0" layoutY="11.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="82.0" style="-fx-background-color: rgba(169, 169, 169, 0.5)rgba(0, 0, 0, 0.5); -fx-background-radius: 30;" text="Show All ">
+                        <Button fx:id="ShowButton" layoutX="202.0" layoutY="11.0" mnemonicParsing="false" onAction="#handleShow" prefHeight="25.0" prefWidth="82.0" style="-fx-background-color: rgba(169, 169, 169, 0.5)rgba(0, 0, 0, 0.5); -fx-background-radius: 30;" text="Show All ">
                            <font>
                               <Font name="Arial Italic" size="13.0" />
                            </font>
                         </Button>
-                        <Button fx:id="AddButton1" layoutX="375.0" layoutY="11.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="126.0" style="-fx-background-color: rgba(169, 169, 169, 0.5)rgba(0, 0, 0, 0.5); -fx-background-radius: 30;" text="Add New Patient">
+                        <Button fx:id="AddButton1" layoutX="375.0" layoutY="11.0" mnemonicParsing="false" onAction="#handleAddButton" prefHeight="25.0" prefWidth="126.0" style="-fx-background-color: rgba(169, 169, 169, 0.5)rgba(0, 0, 0, 0.5); -fx-background-radius: 30;" text="Add New Patient">
                            <font>
                               <Font name="Arial Italic" size="13.0" />
                            </font>
@@ -64,7 +64,7 @@
                   <Font name="Arial Italic" size="13.0" />
                </font>
             </Button>
-            <Button fx:id="LabButton" layoutX="11.0" layoutY="184.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="104.0" style="-fx-background-color: rgba(169, 169, 169, 0.5)rgba(0, 0, 0, 0.5); -fx-background-radius: 40;" text="Laps">
+            <Button fx:id="LabButton" layoutX="11.0" layoutY="184.0" mnemonicParsing="false" onAction="#handleLabButton" prefHeight="33.0" prefWidth="104.0" style="-fx-background-color: rgba(169, 169, 169, 0.5)rgba(0, 0, 0, 0.5); -fx-background-radius: 40;" text="Laps">
                <font>
                   <Font name="Arial Italic" size="13.0" />
                </font>

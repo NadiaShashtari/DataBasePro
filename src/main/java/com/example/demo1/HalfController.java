@@ -12,6 +12,9 @@ import javafx.scene.Scene;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Alert;
 
+import javafx.event.ActionEvent;
+import java.io.IOException;
+
 
 public class HalfController {
 
@@ -104,6 +107,27 @@ private void handleLogOut() {
             errorAlert.setHeaderText(null);
             errorAlert.setContentText("Failed to load the patient screen. Please try again.");
             errorAlert.showAndWait();
+        }
+    }
+
+    @FXML
+    private void handleLabButtonAction(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Laps.fxml"));
+            Parent newPage = loader.load();
+
+            // الحصول على المشهد الحالي
+            Scene currentScene = LabButton.getScene();
+
+            // الحصول على مرحلة العرض
+            Stage stage = (Stage) currentScene.getWindow();
+
+            // إعداد المشهد الجديد
+            stage.setScene(new Scene(newPage));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+
         }
     }
 
