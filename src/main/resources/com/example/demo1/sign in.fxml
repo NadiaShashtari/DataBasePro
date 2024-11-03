@@ -15,11 +15,11 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="447.0" prefWidth="782.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.SignInController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="447.0" prefWidth="782.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fx:id="ImagViewReception" fitHeight="447.0" fitWidth="782.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../img/signIn.jpg" />
+            <Image url="@img/signIn.jpg" />
          </image>
       </ImageView>
       <Pane fx:id="PaneWelcome" layoutX="58.0" layoutY="173.0" prefHeight="266.0" prefWidth="296.0" style="-fx-background-color: rgba(0, 0, 0, 0.5); -fx-background-radius: 30;">
@@ -70,7 +70,7 @@
                         </DropShadow>
                      </effect>
                      <image>
-                        <Image url="@../../../img/user2icon.png" />
+                        <Image url="@img/user2icon.png" />
                      </image>
                   </ImageView>
                </children>
@@ -94,7 +94,7 @@
                         </DropShadow>
                      </effect>
                      <image>
-                        <Image url="@../../../img/password.png" />
+                        <Image url="@img/password.png" />
                      </image>
                   </ImageView>
                </children>
@@ -102,7 +102,7 @@
                   <Insets />
                </opaqueInsets>
             </Pane>
-            <Button fx:id="ButtonLogin" layoutX="95.0" layoutY="187.0" mnemonicParsing="false" onAction="#showhalf" prefHeight="33.0" prefWidth="106.0" style="-fx-background-color: rgb(30, 30, 30); -fx-background-radius: 20;" text="Login">
+            <Button fx:id="ButtonLogin" layoutX="95.0" layoutY="187.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="106.0" style="-fx-background-color: rgb(30, 30, 30); -fx-background-radius: 20;" text="Login">
                <font>
                   <Font name="Bookman Old Style" size="14.0" />
                </font>

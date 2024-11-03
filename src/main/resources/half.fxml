@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="HalfAnch" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="447.0" prefWidth="782.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.HalfController">
+   <children>
+      <ImageView fx:id="HalfImag" fitHeight="447.0" fitWidth="782.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/Patienttt.jpg" />
+         </image>
+      </ImageView>
+      <Pane fx:id="Pane1" layoutX="17.0" layoutY="12.0" prefHeight="422.0" prefWidth="746.0" style="-fx-background-color: rgba(169, 169, 169, 0.5)rgba(0, 0, 0, 0.5);; -fx-background-radius: 30;">
+         <children>
+            <Pane fx:id="Pane2" layoutX="229.0" layoutY="1.0" prefHeight="52.0" prefWidth="289.0" />
+            <Pane fx:id="Pane3" layoutX="18.0" layoutY="52.0" prefHeight="367.0" prefWidth="126.0" style="-fx-background-color: rgba(0, 0, 0, 0.4);; -fx-background-radius: 20;">
+               <children>
+                  <Button fx:id="ExpensesButton" layoutX="11.0" layoutY="296.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="104.0" style="-fx-background-color: rgba(169, 169, 169, 0.5)rgba(0, 0, 0, 0.5); -fx-background-radius: 40;" text="Expenses">
+                     <font>
+                        <Font name="Arial Italic" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="InventoryButton" layoutX="11.0" layoutY="240.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="104.0" style="-fx-background-color: rgba(169, 169, 169, 0.5)rgba(0, 0, 0, 0.5); -fx-background-radius: 40;" text="Inventory">
+                     <font>
+                        <Font name="Arial Italic" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="LabButton" layoutX="11.0" layoutY="184.0" mnemonicParsing="false" onAction="#handleLabButtonAction" prefHeight="33.0" prefWidth="104.0" style="-fx-background-color: rgba(169, 169, 169, 0.5)rgba(0, 0, 0, 0.5); -fx-background-radius: 40;" text="Laps">
+                     <font>
+                        <Font name="Arial Italic" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="AppButton" layoutX="11.0" layoutY="137.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="104.0" style="-fx-background-color: rgba(169, 169, 169, 0.5)rgba(0, 0, 0, 0.5); -fx-background-radius: 40;" text="Appointment">
+                     <font>
+                        <Font name="Arial Italic" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="PatientButton" layoutX="11.0" layoutY="89.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="104.0" style="-fx-background-color: rgba(169, 169, 169, 0.5)rgba(0, 0, 0, 0.5); -fx-background-radius: 40;" text="Patient">
+                     <font>
+                        <Font name="Arial Italic" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="DoctorButton" layoutX="11.0" layoutY="35.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="104.0" style="-fx-background-color: rgba(169, 169, 169, 0.5)rgba(0, 0, 0, 0.5); -fx-background-radius: 40;" text="Doctor">
+                     <font>
+                        <Font name="Arial Italic" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Label fx:id="TitelLabel" layoutX="304.0" layoutY="-3.0" prefHeight="58.0" prefWidth="189.0" text=" Dental Clinic">
+               <font>
+                  <Font name="Pristina" size="36.0" />
+               </font>
+            </Label>
+            <Button fx:id="LogOutButton" layoutX="40.0" layoutY="2.0" mnemonicParsing="false" onAction="#handleLogOut" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: black; -fx-background-radius: 30;" text="Log Out" textFill="#fffcfc" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
