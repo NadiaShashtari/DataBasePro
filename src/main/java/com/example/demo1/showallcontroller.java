@@ -161,6 +161,7 @@ public class showallcontroller {
             Stage stage = (Stage) back.getScene().getWindow(); // الحصول على نافذة الزر الحالي
             stage.setScene(new Scene(root)); // تغيير المشهد
             stage.show(); // عرض المشهد الجديد
+            ((Stage) back.getScene().getWindow()).close();
         } catch (Exception e) {
             e.printStackTrace(); // التعامل مع الأخطاء
         }
@@ -174,6 +175,8 @@ public class showallcontroller {
         stage.setScene(new Scene(addRoot));
         stage.setTitle("Add Appointment");
         stage.show();
+        ((Stage) add.getScene().getWindow()).close();
+
     }
 
     @FXML
@@ -184,6 +187,7 @@ public class showallcontroller {
             Stage stage = (Stage) ok1.getScene().getWindow(); // الحصول على النافذة الحالية
             stage.setScene(new Scene(root)); // تغيير المشهد
             stage.show(); // عرض الشاشة الجديدة
+            ((Stage) ok1.getScene().getWindow()).close();
         } catch (Exception e) {
             e.printStackTrace(); // طباعة أي خطأ في حالة حدوثه
         }
@@ -198,6 +202,8 @@ public class showallcontroller {
             stage.setScene(new Scene(root));
             stage.setTitle("Search Screen");
             stage.show();
+            ((Stage) search.getScene().getWindow()).close();
+
         } catch (Exception e) {
             e.printStackTrace();
         }

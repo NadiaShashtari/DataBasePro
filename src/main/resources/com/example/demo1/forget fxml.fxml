@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="447.0" prefWidth="782.0" styleClass="background-pane" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.ForgetPasswordController">
+   <children>
+      <ImageView fitHeight="447.0" fitWidth="782.0">
+         <image>
+            <Image url="@../../../img/signIn.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="8.0" layoutY="8.0" prefHeight="430.0" prefWidth="766.0" style="-fx-background-color: rgba(0, 0, 0, 0.7); -fx-background-radius: 30;">
+         <children>
+            <ImageView fitHeight="30.0" fitWidth="29.0" layoutX="225.0" layoutY="137.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" style="-fx-blend-mode: white;">
+               <image>
+                  <Image url="@../../../img/password.png" />
+               </image>
+               <effect>
+                  <DropShadow spread="0.47">
+                     <color>
+                        <Color red="0.75789475440979" green="0.75789475440979" blue="0.75789475440979" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </ImageView>
+            <Label fx:id="messageLabel" layoutX="272.0" layoutY="129.0" prefHeight="45.0" prefWidth="286.0" text="Forget your log In Details?" textFill="#f7f1f1">
+               <font>
+                  <Font name="Britannic Bold" size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.9789473414421082" green="0.9608187079429626" blue="0.9608187079429626" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Label>
+            <ImageView fitHeight="36.0" fitWidth="35.0" layoutX="222.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/user2icon.png" />
+               </image>
+               <effect>
+                  <DropShadow spread="0.66">
+                     <color>
+                        <Color red="0.5789473652839661" green="0.5768031477928162" blue="0.5768031477928162" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </ImageView>
+            <JFXTextField fx:id="emailField" focusColor="#151515" layoutX="286.0" layoutY="223.0" prefHeight="36.0" prefWidth="173.0" promptText="           Gmail" style="-fx-background-color: rgba(255, 255, 255, 0.5);" unFocusColor="#f2e7e7">
+               <font>
+                  <Font name="Britannic Bold" size="18.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

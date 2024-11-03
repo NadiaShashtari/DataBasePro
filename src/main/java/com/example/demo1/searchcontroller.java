@@ -165,6 +165,7 @@ public class searchcontroller {
             Stage stage = (Stage) back.getScene().getWindow(); // الحصول على نافذة الزر الحالي
             stage.setScene(new Scene(root)); // تغيير المشهد
             stage.show(); // عرض المشهد الجديد
+            ((Stage) back.getScene().getWindow()).close();
         } catch (Exception e) {
             e.printStackTrace(); // التعامل مع الأخطاء
         }}
@@ -176,6 +177,7 @@ public class searchcontroller {
         stage.setScene(new Scene(showRoot));
         stage.setTitle("Show Screen");
         stage.show();
+        ((Stage) show.getScene().getWindow()).close();
     }
 
 
@@ -187,6 +189,8 @@ public class searchcontroller {
         stage.setScene(new Scene(addRoot));
         stage.setTitle("Add Appointment");
         stage.show();
+        ((Stage) add.getScene().getWindow()).close();
+
     }
 
     @FXML
@@ -197,6 +201,8 @@ public class searchcontroller {
             Stage stage = (Stage) ok1.getScene().getWindow(); // الحصول على النافذة الحالية
             stage.setScene(new Scene(root)); // تغيير المشهد
             stage.show(); // عرض الشاشة الجديدة
+            ((Stage) ok1.getScene().getWindow()).close();
+
         } catch (Exception e) {
             e.printStackTrace(); // طباعة أي خطأ في حالة حدوثه
         }

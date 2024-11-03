@@ -308,6 +308,8 @@ public class dentalcliniccontroller {
 
        @FXML
        private Label ccc;
+    @FXML
+    private Button ok1;
 
        @FXML
        private Label ddd;
@@ -418,6 +420,8 @@ public class dentalcliniccontroller {
            Stage stage = (Stage) log.getScene().getWindow(); // الحصول على نافذة الزر الحالي
            stage.setScene(new Scene(root)); // تغيير المشهد
            stage.show(); // عرض المشهد الجديد
+             ((Stage) log.getScene().getWindow()).close();
+
        } catch (Exception e) {
              e.printStackTrace(); // التعامل مع الأخطاء
          }}
@@ -514,9 +518,10 @@ public class dentalcliniccontroller {
         try {
             // Load the FXML file for the signin screen
             Parent root = FXMLLoader.load(getClass().getResource("sign in.fxml"));
-            Stage stage = (Stage) log.getScene().getWindow(); // الحصول على النافذة الحالية
+            Stage stage = (Stage) ok1.getScene().getWindow(); // الحصول على النافذة الحالية
             stage.setScene(new Scene(root)); // تغيير المشهد
             stage.show(); // عرض الشاشة الجديدة
+            ((Stage) ok1.getScene().getWindow()).close();
         } catch (Exception e) {
             e.printStackTrace(); // طباعة أي خطأ في حالة حدوثه
         }
@@ -530,6 +535,21 @@ public class dentalcliniccontroller {
             stage.setTitle("Appointments");
             stage.setScene(scene);
             stage.show();
+            ((Stage) Appointment.getScene().getWindow()).close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    private void showinventoryScreen() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(SignInApplication.class.getResource("inventory.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 782, 447);
+            Stage stage = new Stage();
+            stage.setTitle("Appointments");
+            stage.setScene(scene);
+            stage.show();
+            ((Stage) inventory.getScene().getWindow()).close();
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -10,6 +10,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.animation.TranslateTransition;
+import javafx.util.Duration;
+
 
 public class halfcontroller {
     @FXML
@@ -46,6 +49,8 @@ public class halfcontroller {
     private Pane pa;
     @FXML
     private Button log;
+    @FXML
+    private Button button;
 
     @FXML
     private Pane pane;
@@ -54,8 +59,31 @@ public class halfcontroller {
     public void initialize() {
         Doctor.setOnAction(event -> showDentiClinic());
         Appointment.setOnAction(event -> showAppoScreen()); // إضافة الحدث الجديد
-    }
 
+            animateButton(Appointment, 300, 0);       // تحريك الزر من اليمين
+            animateButton(Doctor, -300, 0);   // تحريك الزر من اليسار
+            animateButton(Expenses, 0, 300);  // تحريك الزر من الأسفل
+            animateButton(Inventory, 0, -300); // تحريك الزر من الأعلى
+            animateButton(Laps, 300, 0);       // تحريك الزر من اليمين
+            animateButton(log, -300, 0);   // تحريك الزر من اليسار
+            animateButton(Patient, 0, 300);
+        animateButton(button, 0, 300);
+        }
+
+        private void animateButton(Button button, double fromX, double fromY) {
+            // إعداد الحركة من نقطة البداية خارج الشاشة
+            button.setTranslateX(fromX);
+            button.setTranslateY(fromY);
+
+            // إنشاء الحركة الانتقالية
+            TranslateTransition transition = new TranslateTransition(Duration.seconds(1), button);
+            transition.setToX(0); // العودة إلى الموضع الأصلي
+            transition.setToY(0); // العودة إلى الموضع الأصلي
+            transition.setAutoReverse(false);
+
+            // تشغيل الحركة
+            transition.play();
+        }
 
     @FXML
     private void showDentiClinic() {
@@ -66,6 +94,7 @@ public class halfcontroller {
             stage.setTitle("Welcome To Dental Clinic!");
             stage.setScene(scene);
             stage.show();
+            ((Stage) Doctor.getScene().getWindow()).close();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -79,6 +108,7 @@ public class halfcontroller {
             stage.setTitle("Appointments");
             stage.setScene(scene);
             stage.show();
+            ((Stage) Appointment.getScene().getWindow()).close();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -91,8 +121,37 @@ public class halfcontroller {
             Stage stage = (Stage) log.getScene().getWindow(); // الحصول على النافذة الحالية
             stage.setScene(new Scene(root)); // تغيير المشهد
             stage.show(); // عرض الشاشة الجديدة
+            ((Stage) log.getScene().getWindow()).close();
         } catch (Exception e) {
             e.printStackTrace(); // طباعة أي خطأ في حالة حدوثه
+        }
+    }
+    @FXML
+    private void showinventoryScreen() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(SignInApplication.class.getResource("inventory.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 782, 447);
+            Stage stage = new Stage();
+            stage.setTitle("Appointments");
+            stage.setScene(scene);
+            stage.show();
+            ((Stage) Inventory.getScene().getWindow()).close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    private void showchat() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(SignInApplication.class.getResource("chatboot.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 782, 447);
+            Stage stage = new Stage();
+            stage.setTitle("Welcome To Dental Clinic!");
+            stage.setScene(scene);
+            stage.show();
+            ((Stage) button.getScene().getWindow()).close();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 

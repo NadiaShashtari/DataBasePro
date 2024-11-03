@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="447.0" prefWidth="782.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.chatbootcontroller">
+   <children>
+      <JFXTextField fx:id="text" layoutX="460.0" layoutY="392.0" prefHeight="42.0" prefWidth="279.0" style="-fx-background-color: #D9E6E0; -fx-background-radius: 40;" />
+      <JFXButton fx:id="button" layoutX="748.0" layoutY="394.0" style="-fx-background-color: #D9E6E0; -fx-background-radius: 30;" text="↑">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="199.0" fitWidth="170.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/Pinterest_files/365e9e8d9ae1c94826072ada46325b99.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="195.0" layoutY="14.0" prefHeight="139.0" prefWidth="214.0" text="CHAT BOOT FOR DOCTOR" textAlignment="JUSTIFY">
+         <font>
+            <Font name="Impact" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="101.0" layoutY="199.0" prefHeight="91.0" prefWidth="94.0" text="HI">
+         <font>
+            <Font name="Palatino Linotype Italic" size="74.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.6590909090909091" endY="0.969696971503171" startX="0.4469696824636423" startY="0.20075754685835404">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.4627451002597809" green="0.45490196347236633" blue="0.45490196347236633" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.16810916364192963" green="0.7355776429176331" blue="0.8105263113975525" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="196.0" layoutY="258.0" prefHeight="68.0" prefWidth="115.0" text="HOW">
+         <font>
+            <Font name="System Italic" size="48.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.6590909090909091" endY="0.969696971503171" startX="0.4469696824636423" startY="0.20075754685835404">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.4627451002597809" green="0.45490196347236633" blue="0.45490196347236633" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.07797271013259888" green="0.7402209043502808" blue="0.8421052694320679" opacity="0.3700000047683716" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="64.0" layoutY="323.0" prefHeight="63.0" prefWidth="102.0" text="I CAN">
+         <font>
+            <Font name="System Italic" size="37.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.4469696824636423" startY="0.35227269837350556">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.4627451002597809" green="0.45490196347236633" blue="0.45490196347236633" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.13600000739097595" green="0.7889333367347717" blue="0.800000011920929" opacity="0.8389057517051697" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="207.0" layoutY="363.0" prefHeight="46.0" prefWidth="94.0" text="HELP ">
+         <font>
+            <Font name="System Italic" size="31.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.20454545448901074" startY="0.2537878354390462">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.4627451002597809" green="0.45490196347236633" blue="0.45490196347236633" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.13333334028720856" green="0.7888888716697693" blue="0.800000011920929" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="81.0" layoutY="388.0" text="YOU!">
+         <font>
+            <Font name="System Italic" size="35.0" />
+         </font>
+         <textFill>
+            <LinearGradient endY="1.0" startX="0.4469696824636423" startY="0.35227269837350556">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.125490203499794" green="0.529411792755127" blue="0.5372549295425415" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <ScrollPane fx:id="scroll" fitToWidth="true" layoutX="451.0" layoutY="4.0" prefHeight="383.0" prefWidth="330.0">
+         <content>
+            <VBox fx:id="vbox" prefHeight="385.0" prefWidth="315.0" />
+         </content>
+      </ScrollPane>
+      <Button fx:id="ok1" layoutX="173.0" layoutY="-1.0" mnemonicParsing="false" onAction="#handlogButton" prefHeight="26.0" prefWidth="88.0" style="-fx-background-color: black; -fx-background-radius: 20;" text="Back" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
