@@ -16,6 +16,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.animation.TranslateTransition;
+import javafx.scene.control.Button;
+import javafx.util.Duration;
 
 public class SignInController {
 
@@ -57,27 +60,6 @@ public class SignInController {
 
     private DatabaseConnection databaseConnection = new DatabaseConnection();
 
-   /* @FXML
-    private void handleLogin() {
-        String email = JFXTextFieldUser.getText();
-        String password = passwordfieldSign.getText();
-
-        if (authenticateUser(email, password)) {
-            Alert successAlert = new Alert(Alert.AlertType.INFORMATION);
-            successAlert.setTitle("Login Successful");
-            successAlert.setHeaderText(null);
-            successAlert.setContentText("Login successful! You will be redirected.");
-            successAlert.showAndWait();
-            // Navigate to the next screen or perform any other action
-        } else {
-            Alert errorAlert = new Alert(Alert.AlertType.ERROR);
-            errorAlert.setTitle("Login Failed");
-            errorAlert.setHeaderText(null);
-            errorAlert.setContentText("Login failed. Please check your credentials.");
-            errorAlert.showAndWait();
-            // Show an error message
-        }
-    } */
 
 
     // Method to authenticate user credentials
@@ -104,12 +86,9 @@ public class SignInController {
         String email = JFXTextFieldUser.getText();
         String password = passwordfieldSign.getText();
 
+
+
         if (authenticateUser(email, password)) {
-          //  Alert successAlert = new Alert(Alert.AlertType.INFORMATION);
-           // successAlert.setTitle("Login Successful");
-           // successAlert.setHeaderText(null);
-           // successAlert.setContentText("Login successful! You will be redirected.");
-           // successAlert.showAndWait();
 
             // Load the new interface
             try {

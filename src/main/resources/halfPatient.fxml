@@ -54,7 +54,7 @@
       <Button fx:id="LogOutButton" layoutX="50.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleLogOut" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: black; -fx-background-radius: 30;" text="Log Out" textFill="#fffcfc" />
       <Pane fx:id="Pane4" layoutX="28.0" layoutY="62.0" prefHeight="367.0" prefWidth="126.0" style="-fx-background-color: rgba(0, 0, 0, 0.4);; -fx-background-radius: 20;">
          <children>
-            <Button fx:id="ExpensesButton" layoutX="11.0" layoutY="296.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="104.0" style="-fx-background-color: rgba(169, 169, 169, 0.5)rgba(0, 0, 0, 0.5); -fx-background-radius: 40;" text="Expenses">
+            <Button fx:id="ExpensesButton" layoutX="11.0" layoutY="296.0" mnemonicParsing="false" onAction="#handleExpensesButton" prefHeight="33.0" prefWidth="104.0" style="-fx-background-color: rgba(169, 169, 169, 0.5)rgba(0, 0, 0, 0.5); -fx-background-radius: 40;" text="Expenses">
                <font>
                   <Font name="Arial Italic" size="13.0" />
                </font>
@@ -64,7 +64,7 @@
                   <Font name="Arial Italic" size="13.0" />
                </font>
             </Button>
-            <Button fx:id="LabButton" layoutX="11.0" layoutY="184.0" mnemonicParsing="false" onAction="#handleLabButton" prefHeight="33.0" prefWidth="104.0" style="-fx-background-color: rgba(169, 169, 169, 0.5)rgba(0, 0, 0, 0.5); -fx-background-radius: 40;" text="Laps">
+            <Button fx:id="LabButton" layoutX="11.0" layoutY="184.0" mnemonicParsing="false" onAction="#handleLabButton" prefHeight="33.0" prefWidth="104.0" style="-fx-background-color: rgba(169, 169, 169, 0.5)rgba(0, 0, 0, 0.5); -fx-background-radius: 40;" text="Labs">
                <font>
                   <Font name="Arial Italic" size="13.0" />
                </font>

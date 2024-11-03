@@ -12,7 +12,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import java.io.IOException;
-
+import javafx.animation.TranslateTransition;
+import javafx.util.Duration;
 
 public class HalfPatientController {
 
@@ -187,10 +188,60 @@ public class HalfPatientController {
         }
     }
 
+    @FXML
+    private void handleExpensesButton() {
+        // Load the patient interface
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Expenses.fxml"));
+            Parent root = loader.load();
+
+            // Create a new stage (window) for the patient screen
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Expenses Management");
+            stage.show();
+
+            // Optionally, close the current window (Half screen)
+            ((Stage) PatientButton.getScene().getWindow()).close(); // Close the current window
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            Alert errorAlert = new Alert(Alert.AlertType.ERROR);
+            errorAlert.setTitle("Error");
+            errorAlert.setHeaderText(null);
+            errorAlert.setContentText("Failed to load the patient screen. Please try again.");
+            errorAlert.showAndWait();
+        }
+    }
+
+
 
     @FXML
     private void initialize() {
         SearchButton1.setOnAction(this::handleSearchButton); // Assign the event handler to the search button
+
+        animateButton(ShowButton, -300, 0);
+
+        // تحريك AddButton1 من اليسار إلى موضعه الأصلي
+        animateButton(AddButton1, -300, 0);
+
+        // تحريك SearchButton1 من اليسار إلى موضعه الأصلي
+        animateButton(SearchButton1, -300, 0);
+    }
+
+    private void animateButton(Button button, double fromX, double fromY) {
+        // إعداد موضع البداية للزر ليبدأ من اليسار خارج الشاشة
+        button.setTranslateX(fromX);
+        button.setTranslateY(fromY);
+
+        // إنشاء حركة الانتقال
+        TranslateTransition transition = new TranslateTransition(Duration.seconds(1), button);
+        transition.setToX(0); // العودة إلى الموضع الأصلي
+        transition.setToY(0);
+        transition.setAutoReverse(false);
+
+        // تشغيل الحركة
+        transition.play();
     }
 }
 

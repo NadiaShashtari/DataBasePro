@@ -138,8 +138,8 @@ public class LabShowAll {
                 Map<String, Object> labMap = new HashMap<>();
                 labMap.put("LabID", resultSet.getInt("lab_id"));
                 labMap.put("Name", resultSet.getString("lapname"));
-                labMap.put("City", resultSet.getString("city"));
-                labMap.put("Street", resultSet.getString("street"));
+                labMap.put("city", resultSet.getString("city")); // Ensure consistency in key names
+                labMap.put("street", resultSet.getString("street"));
                 labMap.put("PhoneNumber", resultSet.getString("phonenumber"));
                 labMap.put("TestType", resultSet.getString("testtype"));
                 labMap.put("TotalAmountPaid", resultSet.getDouble("totalamountpaid"));

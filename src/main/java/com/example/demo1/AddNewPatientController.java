@@ -56,6 +56,14 @@ public class AddNewPatientController {
     private Button ShowButt;
 
     @FXML
+    private JFXTextField DueTxt;
+    @FXML
+    private JFXTextField PaidTxt;
+    @FXML
+    private JFXTextField TotalTxtF;
+
+
+    @FXML
     private Button LogOutButton;
 
 
@@ -72,9 +80,13 @@ public class AddNewPatientController {
         String phone = PhoneTxtF.getText().trim();
         String treatmentPlan = TreatmentPlanTxtF.getText().trim();
         String birthDateStr = BDTxtF.getText().trim();
+        String dueAmount = DueTxt.getText().trim();
+        String paidAmount = PaidTxt.getText().trim();
+        String totalAmount = TotalTxtF.getText().trim();
 
-        // التحقق من الحقول الفارغة
-        if (firstName.isEmpty() || lastName.isEmpty() || email.isEmpty() || phone.isEmpty() || treatmentPlan.isEmpty() || birthDateStr.isEmpty()) {
+        if (firstName.isEmpty() || lastName.isEmpty() || email.isEmpty() || phone.isEmpty() ||
+                treatmentPlan.isEmpty() || birthDateStr.isEmpty() || dueAmount.isEmpty() ||
+                paidAmount.isEmpty() || totalAmount.isEmpty()) {
             System.out.println("All fields must be filled.");
             return;
         }
@@ -91,7 +103,7 @@ public class AddNewPatientController {
             System.out.println("Error parsing the birth date.");
             return;
         }
-        String insertQuery = "INSERT INTO patients (firstname, middelname, lastname, email, phonenumber, birthday, treatmentplan) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        String insertQuery = "INSERT INTO patients (firstname, middelname, lastname, email, phonenumber, birthday, treatmentplan , due, paid, totaltreatmenamount) VALUES (?, ?, ?, ?, ?, ?, ? , ? ,? , ?)";
 
         try (Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "nadia", "123456");
              PreparedStatement preparedStatement = connection.prepareStatement(insertQuery)) {
@@ -103,6 +115,9 @@ public class AddNewPatientController {
             preparedStatement.setString(5, phone);
             preparedStatement.setDate(6, birthDate);
             preparedStatement.setString(7, treatmentPlan);
+            preparedStatement.setString(8, dueAmount);  // قيمة العمود due
+            preparedStatement.setString(9, paidAmount); // قيمة العمود paid
+            preparedStatement.setString(10, totalAmount);
 
             int rowsAffected = preparedStatement.executeUpdate();
             if (rowsAffected > 0) {
